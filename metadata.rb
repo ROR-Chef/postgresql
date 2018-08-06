@@ -6,8 +6,8 @@ license           'Apache 2.0'
 description       'Installs and configures postgresql for clients or servers'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version           '6.1.1'
-source_url        'https://github.com/sous-chefs/postgresql'
-issues_url        'https://github.com/sous-chefs/postgresql/issues'
+source_url        'https://github.com/sous-chefs/postgresql' if respond_to?(:source_url)
+issues_url        'https://github.com/sous-chefs/postgresql/issues' if respond_to?(:issues_url)
 chef_version      '>= 12.1' if respond_to?(:chef_version)
 recipe            'postgresql::default', 'Includes postgresql::client'
 recipe            'postgresql::ruby', 'Installs pg gem for Ruby bindings'
