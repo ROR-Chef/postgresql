@@ -14,7 +14,6 @@ action :create do
       execute "create postgresql user #{new_resource.name}" do # ~FC009
         user "postgres"
         command %(psql -c "CREATE ROLE #{role_sql}")
-        sensitive true
       end
 
       new_resource.updated_by_last_action(true)
