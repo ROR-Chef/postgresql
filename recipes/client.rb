@@ -16,8 +16,6 @@
 # limitations under the License.
 #
 
-puts ">>>>>>>>>>>>>>>#{node['platform_family']}"
-puts ">>>>>>>>>>>>>>>#{node['postgresql']}"
 case node['platform_family']
 when 'debian'
   if node['postgresql']['version'].to_f > 9.3
